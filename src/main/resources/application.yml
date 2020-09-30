@@ -15,4 +15,4 @@ info:
   java.version: ${java.version}
   application.encoding: @project.build.sourceEncoding@
   application.name: ${spring.application.name}
-  spring.boot.version: @spring-boot.version@
+#  spring.boot.version: @spring-boot.version@
