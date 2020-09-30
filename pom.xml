@@ -49,9 +49,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <layout>LAYERED_JAR</layout>
-                </configuration>
+                <!--                <configuration>-->
+                <!--                    <layout>LAYERED_JAR</layout>-->
+                <!--                </configuration>-->
                 <executions>
                     <execution>
                         <id>build-info</id>
