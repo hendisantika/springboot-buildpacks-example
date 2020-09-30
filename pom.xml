@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.hendisantika</groupId>
     <artifactId>springboot-buildpacks-example</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>springboot-buildpacks-example</name>
     <description>Demo project for Spring Boot</description>
 
@@ -49,6 +49,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <layout>LAYERED_JAR</layout>
+                </configuration>
                 <executions>
                     <execution>
                         <id>build-info</id>
