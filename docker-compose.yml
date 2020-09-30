@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  spring-boot-app:
+    image: hendisantika/cloud-native-buildpacks-example
+    container_name: springbootcontainer
+    ports:
+      - 8080:8080
