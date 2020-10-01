@@ -10,8 +10,8 @@ Buildpacks provide a higher-level abstraction for building applications compared
 Long story short, a buildpack will transform your source code into a runnable application image!
 
 Spring Boot 2.3.x introduces the support for building Docker images using Cloud Native Buildpacks has been added to the:
-1. Spring Boot Maven plugins (via the spring-boot:build-image goal)
-2. Spring Boot Gradle plugin (via the bootBuildImage task)
+1. [Spring Boot Maven plugins](https://docs.spring.io/spring-boot/docs/2.3.0.M1/maven-plugin/html/) (via the spring-boot:build-image goal)
+2. [Spring Boot Gradle plugin](https://docs.spring.io/spring-boot/docs/2.3.0.M1/gradle-plugin/reference/html/) (via the bootBuildImage task)
 
 ## Prerequisites
 
