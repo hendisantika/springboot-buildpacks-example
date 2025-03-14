@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.hendisantika</groupId>
     <artifactId>springboot-buildpacks-example</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <name>springboot-buildpacks-example</name>
     <description>Demo project for Spring Boot</description>
 
@@ -50,10 +50,20 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <!--                                    <layout>LAYERED_JAR</layout>-->
                     <image>
-                        <name>docker.io/hendisantika/${project.artifactId}:latest</name>
+                        <buildpacks>
+                            <buildpack>gcr.io/paketo-buildpacks/amazon-corretto:latest</buildpack>
+                            <buildpack>gcr.io/paketo-buildpacks/ca-certificates:latest</buildpack>
+                            <buildpack>gcr.io/paketo-buildpacks/java:latest</buildpack>
+                        </buildpacks>
+                        <env>
+                            <BP_JVM_VERSION>21</BP_JVM_VERSION>
+                        </env>
+                        <name>docker.io/hendisantika/${project.artifactId}:${project.version}</name>
                     </image>
+                    <layers>
+                        <enabled>true</enabled>
+                    </layers>
                 </configuration>
                 <executions>
                     <execution>
